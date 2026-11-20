@@ -3,5 +3,7 @@ research.md
 .research/
 .sourcing/
 *.png
+!assets/favicon.png
+!assets/apple-touch-icon.png
 .DS_Store
 Thumbs.db
