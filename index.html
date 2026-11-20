@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heritage Villa Ahangama — a calm place to stay on the south coast</title>
+<meta name="description" content="Five bedrooms, a private pool and a quiet garden in Ahangama. Rated 4.9 by 29 guests. Stay direct and book in one message.">
+<meta name="theme-color" content="#F6F3EB">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Heritage Villa Ahangama">
+<meta property="og:title" content="Heritage Villa Ahangama — a calm place to stay">
+<meta property="og:description" content="Five bedrooms, a private pool and a quiet garden. Rated 4.9 by 29 guests.">
+<meta property="og:url" content="https://heritage-villa-demo.vercel.app/">
+<meta property="og:image" content="https://heritage-villa-demo.vercel.app/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Heritage Villa Ahangama — a calm place to stay">
+<meta name="twitter:description" content="Five bedrooms, a private pool and a quiet garden. Rated 4.9 by 29 guests.">
+<meta name="twitter:image" content="https://heritage-villa-demo.vercel.app/assets/og-image.jpg">
+<link rel="canonical" href="https://heritage-villa-demo.vercel.app/">
+
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/is-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+
+<style>
+@font-face{font-family:"Instrument Serif";src:url("assets/fonts/is-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Instrument Serif";src:url("assets/fonts/is-400-italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-var.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+
+:root{
+  --paper:#F6F3EB; --surface:#EDE8DC; --surface-2:#E4DED0;
+  --ink:#1E211B; --body:#585D50; --mute:#868B7D;
+  --line:#DED8CA; --line-2:#C9C2B2;
+  --olive:#4F5E42; --olive-deep:#38452F; --olive-soft:#DCE3D4;
+  --clay:#A9694A;
+  --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  --r:3px;
+  --wrap:1320px;
+}
+html[data-theme="dark"]{
+  --paper:#141711; --surface:#1D2119; --surface-2:#252A20;
+  --ink:#F0EDE3; --body:#B9BDAC; --mute:#8F9685;
+  --line:#343A2D; --line-2:#464E3C;
+  --olive:#A9BF92; --olive-deep:#C6D6B2; --olive-soft:#2A3324;
+  --clay:#D29271;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-size:16px; line-height:1.65;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+::selection{background:var(--olive);color:var(--paper)}
+
+.wrap{width:min(calc(100% - 64px),var(--wrap));margin-inline:auto}
+.eyebrow{
+  font-size:11px; letter-spacing:.19em; text-transform:uppercase;
+  font-weight:600; color:var(--mute); margin:0 0 20px;
+}
+.rule{height:1px;background:var(--line);border:0;margin:0}
+
+/* ---------- header ---------- */
+.hdr{
+  position:absolute;top:0;left:0;right:0;z-index:30;color:#F7F5ED;
+}
+.hdr-in{
+  height:92px;display:flex;align-items:center;justify-content:space-between;gap:24px;
+}
+.brand{display:flex;align-items:center;gap:12px;flex:none}
+.brand-mark{
+  width:29px;height:29px;border:1px solid currentColor;border-radius:50%;
+  display:grid;place-items:center;font-family:var(--serif);font-size:15px;line-height:1;
+  opacity:.95;
+}
+.brand-txt{display:flex;flex-direction:column;line-height:1.15}
+.brand-txt b{font-family:var(--serif);font-size:19px;font-weight:400;letter-spacing:.01em}
+.brand-txt span{font-size:9px;letter-spacing:.22em;text-transform:uppercase;opacity:.75;margin-top:3px}
+.nav{display:flex;align-items:center;gap:34px}
+.nav a{font-size:12px;letter-spacing:.1em;text-transform:uppercase;opacity:.85;transition:opacity .2s}
+.nav a:hover{opacity:1}
+.hdr-act{display:flex;align-items:center;gap:18px;flex:none}
+.tgl{
+  width:34px;height:34px;display:grid;place-items:center;
+  border:1px solid rgba(255,255,255,.42);background:transparent;border-radius:var(--r);cursor:pointer;
+}
+.tgl svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.5}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--olive);color:#fff;border:1px solid var(--olive);
+  padding:13px 20px;border-radius:var(--r);font-size:12px;font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;cursor:pointer;
+  transition:background .2s,transform .2s,border-color .2s;
+}
+.btn:hover{background:var(--olive-deep);border-color:var(--olive-deep);transform:translateY(-1px)}
+html[data-theme="dark"] .btn{background:var(--olive);color:#141711;border-color:var(--olive)}
+html[data-theme="dark"] .btn:hover{background:#C6D6B2;border-color:#C6D6B2}
+.btn-lite{background:transparent;color:#F7F5ED;border-color:rgba(255,255,255,.5)}
+.btn-lite:hover{background:rgba(255,255,255,.12);border-color:#F7F5ED}
+.btn-dark{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn-dark:hover{background:var(--olive-deep);border-color:var(--olive-deep)}
+.btn .arw{font-size:15px;line-height:0;transform:translateY(-1px)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:min(860px,100svh);display:flex;align-items:flex-end;overflow:hidden;background:#263026}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 52%}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(12,17,10,.46) 0%,rgba(12,17,10,.06) 38%,rgba(12,17,10,.18) 60%,rgba(12,17,10,.72) 100%);
+}
+.hero-in{position:relative;z-index:2;width:100%;padding-bottom:64px;color:#FBF9F2}
+.hero-top{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:38px}
+.hero h1{
+  font-family:var(--serif);font-weight:400;font-size:clamp(56px,8.4vw,124px);
+  line-height:.92;letter-spacing:-.028em;margin:0;max-width:12ch;
+}
+.hero h1 em{font-style:italic;font-weight:400}
+.hero-side{max-width:310px;flex:none;padding-bottom:8px}
+.hero-side p{font-size:15px;line-height:1.7;margin:0 0 22px;color:rgba(251,249,242,.88)}
+.rating{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.02em}
+.stars{color:#EDC98A;letter-spacing:.12em;font-size:14px}
+.hero-foot{
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  border-top:1px solid rgba(255,255,255,.3);padding-top:20px;
+}
+.meta-row{display:flex;gap:30px;flex-wrap:wrap;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.meta-row span{display:flex;align-items:center;gap:9px}
+.meta-row span::before{content:"";width:4px;height:4px;background:#EDC98A;border-radius:50%}
+.scroll-cue{font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.85;display:flex;align-items:center;gap:12px}
+.scroll-cue::after{content:"";width:44px;height:1px;background:rgba(255,255,255,.6)}
+
+/* ---------- intro ---------- */
+.intro{padding:118px 0 112px}
+.intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:90px;align-items:start}
+.intro h2{
+  font-family:var(--serif);font-weight:400;font-size:clamp(42px,5vw,74px);
+  line-height:1.05;letter-spacing:-.02em;margin:0;
+}
+.intro h2 em{font-style:italic;color:var(--olive)}
+.intro-copy{padding-top:12px}
+.intro-copy p{color:var(--body);font-size:17px;line-height:1.85;margin:0 0 26px;max-width:52ch}
+.intro-copy .sig{
+  font-family:var(--serif);font-style:italic;font-size:24px;color:var(--ink);margin:34px 0 30px;
+}
+.textlink{
+  display:inline-flex;align-items:center;gap:12px;font-size:12px;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--olive);
+  border-bottom:1px solid var(--line-2);padding-bottom:6px;
+}
+.textlink:hover{border-color:var(--olive)}
+
+/* ---------- stats ---------- */
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats-in{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:38px 30px 38px 0;border-right:1px solid var(--line)}
+.stat:not(:first-child){padding-left:30px}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-family:var(--serif);font-weight:400;font-size:56px;line-height:1;letter-spacing:-.02em}
+.stat span{display:block;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--mute);margin-top:12px}
+
+/* ---------- stay / gallery ---------- */
+.section{padding:120px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:54px}
+.sec-head h2{
+  font-family:var(--serif);font-weight:400;font-size:clamp(42px,5vw,72px);
+  line-height:1.04;letter-spacing:-.02em;margin:0;max-width:16ch;
+}
+.sec-head h2 em{font-style:italic;color:var(--olive)}
+.sec-note{max-width:330px;color:var(--body);font-size:15px;line-height:1.8;margin:0 0 6px}
+.stay-lead{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+figure{margin:0}
+.frame{overflow:hidden;background:var(--surface);border-radius:var(--r)}
+.frame img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.frame:hover img{transform:scale(1.035)}
+.f-portrait{aspect-ratio:4/5}
+.stay-lead .frame{aspect-ratio:4/4.6}
+.stay-txt h3{font-family:var(--serif);font-weight:400;font-size:clamp(32px,3.4vw,50px);line-height:1.1;margin:0 0 26px}
+.stay-txt p{color:var(--body);font-size:16px;line-height:1.85;margin:0 0 22px;max-width:46ch}
+.features{list-style:none;padding:0;margin:34px 0 0;border-top:1px solid var(--line)}
+.features li{
+  display:flex;gap:18px;align-items:baseline;padding:15px 0;border-bottom:1px solid var(--line);
+  font-size:14px;
+}
+.features i{font-family:var(--serif);font-style:normal;color:var(--olive);font-size:12px;width:22px;flex:none}
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:20px;margin-top:24px}
+.g1{grid-column:span 5}.g2{grid-column:span 4}.g3{grid-column:span 3}
+.gallery .frame{aspect-ratio:4/3}
+.gallery .g2 .frame{aspect-ratio:4/4.4}
+.gallery .g3 .frame{aspect-ratio:3/4.4}
+.cap{font-size:11px;letter-spacing:.09em;color:var(--mute);text-transform:uppercase;margin-top:11px}
+
+/* ---------- pool band ---------- */
+.band{position:relative;color:#F7F5ED;background:#263026;overflow:hidden}
+.band-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 48%}
+.band::after{content:"";position:absolute;inset:0;background:rgba(15,22,13,.45)}
+.band-in{position:relative;z-index:2;padding:130px 0;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.band blockquote{
+  font-family:var(--serif);font-size:clamp(34px,4vw,58px);line-height:1.14;
+  letter-spacing:-.015em;margin:0;max-width:17ch;
+}
+.band blockquote em{font-style:italic;color:#D9E4C8}
+.band-side p{font-size:15px;line-height:1.85;color:rgba(247,245,237,.86);margin:0 0 28px;max-width:40ch}
+.band-side .eyebrow{color:rgba(247,245,237,.65)}
+
+/* ---------- reviews ---------- */
+.reviews{padding:120px 0}
+.rev-top{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:56px}
+.rev-score{display:flex;align-items:baseline;gap:14px}
+.rev-score b{font-family:var(--serif);font-weight:400;font-size:82px;line-height:.9}
+.rev-score div{font-size:12px;line-height:1.7;color:var(--body)}
+.rev-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 68px}
+.rev{border-top:1px solid var(--line-2);padding:28px 0 32px}
+.rev p{font-family:var(--serif);font-size:clamp(22px,2.1vw,30px);line-height:1.32;margin:0 0 20px}
+.rev cite{font-style:normal;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--mute)}
+.rev cite span{color:var(--clay);margin-left:12px}
+
+/* ---------- experiences ---------- */
+.exp{background:var(--surface);padding:120px 0}
+.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:56px}
+.exp-item .frame{aspect-ratio:4/3.1}
+.exp-item h3{font-family:var(--serif);font-size:30px;font-weight:400;margin:22px 0 10px}
+.exp-item p{font-size:14px;line-height:1.8;color:var(--body);margin:0;max-width:34ch}
+
+/* ---------- location ---------- */
+.loc{padding:120px 0}
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.loc-map{
+  border:1px solid var(--line);background:var(--surface);border-radius:var(--r);
+  padding:44px 40px;min-height:390px;display:flex;flex-direction:column;justify-content:space-between;
+}
+.loc-map .pin{font-family:var(--serif);font-size:70px;line-height:1;color:var(--olive)}
+.loc-map address{font-style:normal;font-size:20px;line-height:1.6;margin:32px 0 10px}
+.loc-map small{font-size:12px;color:var(--mute);letter-spacing:.05em}
+.loc-det h2{font-family:var(--serif);font-weight:400;font-size:clamp(40px,4.4vw,64px);line-height:1.06;margin:0 0 28px}
+.loc-det p{color:var(--body);font-size:16px;line-height:1.85;margin:0 0 30px;max-width:46ch}
+.loc-line{display:flex;justify-content:space-between;gap:20px;padding:15px 0;border-bottom:1px solid var(--line);font-size:14px}
+.loc-line span:first-child{color:var(--mute);font-size:11px;letter-spacing:.13em;text-transform:uppercase;padding-top:3px}
+.loc-line a:hover{color:var(--olive)}
+
+/* ---------- cta ---------- */
+.cta{background:var(--olive-deep);color:#F4F2E9;padding:104px 0}
+html[data-theme="dark"] .cta{background:#0D100B;border-top:1px solid var(--line)}
+.cta-in{display:flex;justify-content:space-between;align-items:flex-end;gap:60px}
+.cta h2{font-family:var(--serif);font-weight:400;font-size:clamp(44px,5.6vw,82px);line-height:1.02;letter-spacing:-.02em;margin:0;max-width:14ch}
+.cta h2 em{font-style:italic;color:#D2DFC0}
+.cta-r{max-width:340px;flex:none}
+.cta-r p{font-size:15px;line-height:1.8;color:rgba(244,242,233,.78);margin:0 0 26px}
+.cta .btn{background:#F4F2E9;color:#24301D;border-color:#F4F2E9}
+.cta .btn:hover{background:#DCE3D4;border-color:#DCE3D4}
+
+/* ---------- footer ---------- */
+footer{padding:70px 0 40px}
+.foot-grid{display:flex;justify-content:space-between;gap:50px;flex-wrap:wrap;padding-bottom:50px}
+.foot-brand b{font-family:var(--serif);font-weight:400;font-size:34px;display:block;line-height:1.1}
+.foot-brand span{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.foot-col h4{font-size:10px;letter-spacing:.17em;text-transform:uppercase;color:var(--mute);margin:0 0 16px}
+.foot-col p,.foot-col a{display:block;font-size:14px;line-height:1.9;color:var(--body)}
+.foot-col a:hover{color:var(--olive)}
+.foot-bot{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;gap:20px;font-size:11px;color:var(--mute);letter-spacing:.04em}
+
+/* ---------- dialog ---------- */
+dialog{
+  border:1px solid var(--line-2);border-radius:var(--r);padding:0;
+  background:var(--paper);color:var(--ink);width:min(calc(100% - 32px),540px);
+  box-shadow:0 24px 80px rgba(15,20,12,.3);
+}
+dialog::backdrop{background:rgba(16,21,13,.62)}
+.dlg-in{padding:36px 40px 40px}
+.dlg-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:26px}
+.dlg-top h3{font-family:var(--serif);font-weight:400;font-size:40px;line-height:1;margin:0 0 8px}
+.dlg-top p{font-size:13px;color:var(--mute);margin:0}
+.x{background:transparent;border:1px solid var(--line-2);width:32px;height:32px;border-radius:var(--r);cursor:pointer;line-height:1;font-size:17px;flex:none}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--mute);margin:0 0 7px}
+input,select,textarea{
+  width:100%;background:var(--surface);border:1px solid var(--line-2);border-radius:var(--r);
+  color:var(--ink);padding:11px 12px;font:15px/1.5 var(--sans);margin-bottom:18px;
+}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--olive);outline-offset:-1px}
+textarea{resize:vertical;min-height:74px}
+.dlg .btn{width:100%}
+.dlg-foot{font-size:11px;color:var(--mute);text-align:center;margin:14px 0 0}
+
+/* ---------- mobile book bar ---------- */
+.mobar{
+  position:fixed;z-index:25;left:0;right:0;bottom:0;display:none;
+  background:var(--paper);border-top:1px solid var(--line);padding:12px 20px calc(12px + env(safe-area-inset-bottom));
+  align-items:center;justify-content:space-between;gap:16px;
+}
+.mobar div{display:flex;flex-direction:column;line-height:1.25}
+.mobar b{font-family:var(--serif);font-size:21px;font-weight:400}
+.mobar span{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.mobar .btn{padding:11px 16px}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+/* ---------- responsive ---------- */
+@media (max-width:1100px){
+  .nav{gap:22px}
+  .intro-grid{gap:55px}
+  .stay-lead{gap:36px}
+  .exp-grid{gap:28px}
+  .loc-grid{gap:45px}
+}
+@media (max-width:900px){
+  .nav{display:none}
+  .hdr-in{height:76px}
+  .hero{min-height:760px}
+  .hero-top{display:block;margin-bottom:28px}
+  .hero-side{max-width:520px;margin-top:38px}
+  .hero-in{padding-bottom:46px}
+  .intro,.section,.reviews,.exp,.loc{padding:86px 0}
+  .intro-grid,.stay-lead,.loc-grid{grid-template-columns:1fr;gap:42px}
+  .stats-in{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(3){padding-left:0;border-top:1px solid var(--line)}
+  .stat:nth-child(4){border-top:1px solid var(--line)}
+  .sec-head,.rev-top,.cta-in{display:block}
+  .sec-note{margin-top:22px}
+  .band-in{grid-template-columns:1fr;gap:34px;padding:96px 0}
+  .rev-grid{gap:0 34px}
+  .exp-grid{grid-template-columns:1fr 1fr;gap:38px}
+  .cta h2{max-width:none;margin-bottom:30px}
+  .gallery{gap:14px}
+  .g1{grid-column:span 6}.g2{grid-column:span 6}.g3{grid-column:span 12}
+  .gallery .g3 .frame{aspect-ratio:16/8}
+}
+@media (max-width:640px){
+  .wrap{width:calc(100% - 40px)}
+  .hdr-act .btn{display:none}
+  .hero{min-height:700px}
+  .hero h1{font-size:clamp(52px,14vw,76px)}
+  .hero-foot{display:block}
+  .meta-row{gap:14px 20px;margin-bottom:18px}
+  .scroll-cue{display:none}
+  .stats-in{grid-template-columns:1fr 1fr}
+  .stat b{font-size:44px}
+  .rev-grid{grid-template-columns:1fr}
+  .exp-grid{grid-template-columns:1fr;gap:44px}
+  .gallery{grid-template-columns:1fr 1fr}
+  .g1,.g2,.g3{grid-column:span 2}
+  .gallery .frame,.gallery .g2 .frame,.gallery .g3 .frame{aspect-ratio:4/3}
+  .loc-map{padding:32px 26px;min-height:300px}
+  .cta{padding:80px 0}
+  footer{padding:54px 0 120px}
+  .foot-bot{display:block;line-height:1.8}
+  .mobar{display:flex}
+  .dlg-in{padding:28px 22px 30px}
+  .f-row{grid-template-columns:1fr;gap:0}
+}
+@media (max-width:400px){
+  .wrap{width:calc(100% - 32px)}
+  .brand-txt b{font-size:17px}
+  .brand-mark{width:26px;height:26px}
+  .tgl{width:31px;height:31px}
+  .hero h1{font-size:50px}
+  .stat{padding:28px 16px 28px 0}
+  .stat:not(:first-child){padding-left:16px}
+  .stat b{font-size:38px}
+  .stat span{font-size:10px;letter-spacing:.1em}
+  .mobar .btn{font-size:10px;padding:10px 12px}
+  .mobar b{font-size:18px}
+}
+</style>
+<noscript><style>.rv{opacity:1 !important;transform:none !important}</style></noscript>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="#top" aria-label="Heritage Villa Ahangama, home">
+      <span class="brand-mark">H</span>
+      <span class="brand-txt"><b>Heritage Villa</b><span>Ahangama · Sri Lanka</span></span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#stay">Stay</a>
+      <a href="#villa">The villa</a>
+      <a href="#guests">Guests</a>
+      <a href="#location">Location</a>
+    </nav>
+    <div class="hdr-act">
+      <button class="tgl" id="themeBtn" type="button" aria-label="Toggle colour theme" title="Toggle colour theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.7 6.7 0 0 0 10.5 10.5Z"/></svg>
+      </button>
+      <button class="btn" type="button" data-book>Check availability <span class="arw">↗</span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-labelledby="heroTitle">
+    <img class="hero-img" src="assets/hero-pool.webp" alt="The private pool at Heritage Villa, with two loungers under a white parasol" width="2000" height="1125" decoding="async" fetchpriority="high">
+    <div class="wrap hero-in">
+      <div class="hero-top">
+        <h1 id="heroTitle">A quiet place<br>to <em>come back</em> to.</h1>
+        <div class="hero-side">
+          <p>Five bedrooms, a private pool and a garden full of green. A small, homely villa in Ahangama where the days have no schedule.</p>
+          <div class="rating"><span class="stars" aria-hidden="true">★★★★★</span><span><b>4.9</b> from 29 guest reviews</span></div>
+        </div>
+      </div>
+      <div class="hero-foot">
+        <div class="meta-row">
+          <span>5 bedrooms</span><span>Private pool</span><span>Garden &amp; yoga</span><span>Host on site</span>
+        </div>
+        <a href="#stay" class="scroll-cue">Explore the villa</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro" aria-labelledby="introTitle">
+    <div class="wrap intro-grid">
+      <h2 id="introTitle" class="rv">Calm is not<br>a feature.<br><em>It's the whole place.</em></h2>
+      <div class="intro-copy rv">
+        <p>Guests keep saying the same thing — peaceful, homely, easy. Eleven of the twenty-nine Google reviews mention the calm atmosphere without being asked. That is not a marketing line; it is what people write when they get home.</p>
+        <p>There is space to be together and space to be alone. Swim in the morning, read in the shade, walk into Ahangama when you feel like it. The host and caretakers are there when you need them and invisible when you don't.</p>
+        <p class="sig">"The perfect place to relax, unwind, and enjoy peaceful yoga sessions."</p>
+        <button class="textlink" type="button" data-book>Enquire about dates <span aria-hidden="true">→</span></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="Villa at a glance">
+    <div class="wrap stats-in">
+      <div class="stat rv"><b>4.9</b><span>Guest rating</span></div>
+      <div class="stat rv"><b>29</b><span>Real reviews</span></div>
+      <div class="stat rv"><b>5</b><span>Bedrooms</span></div>
+      <div class="stat rv"><b>56</b><span>Guest photos</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="stay" aria-labelledby="stayTitle">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <h2 id="stayTitle">Room to <em>settle in.</em></h2>
+        <p class="sec-note">Warm, simple rooms with soft light, wooden details and everything in its place. Made for slow mornings rather than show.</p>
+      </div>
+      <div class="stay-lead">
+        <figure class="rv"><div class="frame"><img src="assets/room-warm.webp" alt="A warm bedroom with rattan bedhead, cream pillows and folded towel details" width="1200" height="1500" decoding="async"></div></figure>
+        <div class="stay-txt rv">
+          <h3>Five bedrooms.<br>One shared, easy feeling.</h3>
+          <p>Guests describe the rooms as comfortable and thoughtfully designed. Nothing flashy — just clean lines, good light, and the kind of quiet that lets you actually sleep.</p>
+          <p>Families come here for the space. Groups come for the pool. Almost everyone mentions the host.</p>
+          <ul class="features">
+            <li><i>01</i><span>Five bedrooms in the main house and garden rooms</span></li>
+            <li><i>02</i><span>Private pool with loungers and a shaded garden</span></li>
+            <li><i>03</i><span>Host, manager and caretakers on site</span></li>
+            <li><i>04</i><span>Space for yoga and quiet afternoons</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="gallery">
+        <figure class="g1 rv"><div class="frame"><img src="assets/living-pool.webp" alt="Living room opening through glass doors onto the pool terrace" width="1400" height="1000" decoding="async"></div><figcaption class="cap">Living room → pool</figcaption></figure>
+        <figure class="g2 rv"><div class="frame"><img src="assets/bedroom-arch.webp" alt="A quiet corner with an arched mirror, console table and large leafy plants" width="1200" height="900" decoding="async"></div><figcaption class="cap">The little details</figcaption></figure>
+        <figure class="g3 rv"><div class="frame"><img src="assets/window-detail.webp" alt="Traditional lattice window and a doorway looking into a green garden" width="1000" height="1250" decoding="async"></div><figcaption class="cap">Light and shade</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="villa" aria-labelledby="bandTitle">
+    <img class="band-img" src="assets/aerial.webp" alt="Aerial view of the villa's red-tiled roofs, pool and gardens at dusk" width="2000" height="1000" decoding="async">
+    <div class="wrap band-in">
+      <blockquote class="rv" id="bandTitle">"Beautiful, clean, <em>peaceful</em> and very comfortable."</blockquote>
+      <div class="band-side rv">
+        <p class="eyebrow">The whole property</p>
+        <p>One garden, one pool, a handful of rooms and a team who know how to leave you alone in the best possible way. It is the kind of place people book for two nights and talk about years later.</p>
+        <button class="btn btn-lite" type="button" data-book>See if your dates are free <span class="arw">↗</span></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="guests" aria-labelledby="revTitle">
+    <div class="wrap">
+      <div class="rev-top rv">
+        <div><p class="eyebrow">In their words</p><h2 id="revTitle" class="sec-head" style="display:block;margin:0;font-size:clamp(42px,5vw,72px)">People who <em style="font-style:italic;color:var(--olive)">stayed here.</em></h2></div>
+        <div class="rev-score"><b>4.9</b><div><span class="stars" aria-hidden="true">★★★★★</span><br>29 reviews on Google</div></div>
+      </div>
+      <div class="rev-grid">
+        <div class="rev rv"><p>"From the moment we arrived, everything was absolutely perfect. Our host was incredibly warm, welcoming and helpful throughout our stay, and the entire staff was so kind, attentive and genuinely lovely."</p><cite>Drashti Patel <span>5/5</span></cite></div>
+        <div class="rev rv"><p>"The villa was beautiful, clean, peaceful, and very comfortable. The swimming pool was a fantastic addition... The atmosphere was relaxing."</p><cite>Nadeeshan Fernandz <span>5/5</span></cite></div>
+        <div class="rev rv"><p>"The place is homely and warm and comfortable with a spacious pool and easy access to Ahangama. The service was excellent overall and the food was quite amazing."</p><cite>Izky Faiz <span>5/5</span></cite></div>
+        <div class="rev rv"><p>"The manager and the caretakers were really sweet and helpful. For any inconvenience we faced they were always there to sort it out. Very accommodating people."</p><cite>Aastha Rajpal <span>5/5</span></cite></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="exp" aria-labelledby="expTitle">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <h2 id="expTitle">What the days <em>look like.</em></h2>
+        <p class="sec-note">No activity sheet, no schedule. Just the things guests end up doing anyway.</p>
+      </div>
+      <div class="exp-grid">
+        <article class="exp-item rv"><figure><div class="frame"><img src="assets/hero-pool.webp" alt="Two loungers beside the private pool under a parasol" width="2000" height="1125" decoding="async"></div></figure><h3>Mornings by the pool</h3><p>The water is there before anyone else is awake. Six guests mentioned the pool area in their reviews — it is the heart of the place.</p></article>
+        <article class="exp-item rv"><figure><div class="frame"><img src="assets/garden-path.webp" alt="Path through the villa garden to the entrance, framed by tropical plants" width="1200" height="900" decoding="async"></div></figure><h3>Yoga in the garden</h3><p>Guests have used the quiet corners for yoga sessions. No timetable — ask the host and they will sort out a space.</p></article>
+        <article class="exp-item rv"><figure><div class="frame"><img src="assets/entrance.webp" alt="The villa entrance at dusk, with the illuminated Heritage Garden Boutique sign among tropical plants" width="1600" height="1000" decoding="async"></div></figure><h3>A host who notices</h3><p>Warm, welcoming, always around when something is needed. That is the most repeated praise across the reviews.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="loc" id="location" aria-labelledby="locTitle">
+    <div class="wrap loc-grid">
+      <div class="loc-map rv" aria-hidden="true">
+        <div><div class="pin">⌖</div><p class="eyebrow" style="margin-top:24px">Find us</p></div>
+        <div><address>Wijaya House, Andugoda,<br>Dikkumbura, Ahangama 80650</address><small>Plus code 297R+Q7 Ahangama</small></div>
+      </div>
+      <div class="loc-det rv">
+        <p class="eyebrow">Ahangama, south coast</p>
+        <h2 id="locTitle">Close to the coast.<br><em>Far from the noise.</em></h2>
+        <p>The villa sits in a quiet pocket of Andugoda, a short way from Ahangama town. Guests like that they can get to the beach and the cafés easily, then come back to somewhere still and green.</p>
+        <div class="loc-line"><span>Address</span><span>Wijaya House, Andugoda, Dikkumbura, Ahangama 80650</span></div>
+        <div class="loc-line"><span>Reservations</span><a href="tel:+94770498823">077 049 8823</a></div>
+        <div class="loc-line"><span>Google Maps</span><a href="https://www.google.com/maps/search/?api=1&query=Heritage+Villa+Ahangama" target="_blank" rel="noopener">Open directions ↗</a></div>
+        <div class="loc-line"><span>Hours</span><span>Open daily until 11:30 pm</span></div>
+        <p style="margin-top:26px;font-size:12px;color:var(--mute)">The sign at the gate reads Heritage Garden Boutique — same property, same number.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" aria-labelledby="ctaTitle">
+    <div class="wrap cta-in">
+      <h2 id="ctaTitle" class="rv">Come for two nights.<br><em>Stay for the calm.</em></h2>
+      <div class="cta-r rv">
+        <p>Send one message with your dates and how many of you are coming. The host will reply directly — no forms, no call centre, no waiting.</p>
+        <button class="btn" type="button" data-book>Enquire on WhatsApp <span class="arw">↗</span></button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand"><b>Heritage Villa</b><span>Ahangama · Sri Lanka</span></div>
+      <div class="foot-col"><h4>Explore</h4><a href="#stay">The rooms</a><a href="#villa">The property</a><a href="#guests">Guest reviews</a><a href="#location">Location</a></div>
+      <div class="foot-col"><h4>Contact</h4><a href="tel:+94770498823">077 049 8823</a><a href="https://wa.me/94770498823" target="_blank" rel="noopener">WhatsApp ↗</a><p>Wijaya House, Andugoda<br>Ahangama 80650</p></div>
+      <div class="foot-col"><h4>Guest rating</h4><p style="font-family:var(--serif);font-size:38px;line-height:1;color:var(--ink)">4.9 <span style="font-family:var(--sans);font-size:11px;letter-spacing:.1em;color:var(--mute)">/ 29 reviews</span></p><p>★★★★★ on Google</p></div>
+    </div>
+    <div class="foot-bot"><span>© 2026 Heritage Villa Ahangama</span><span>Book direct. Stay a little longer.</span></div>
+  </div>
+</footer>
+
+<div class="mobar">
+  <div><b>Heritage Villa</b><span>4.9 · 29 reviews</span></div>
+  <button class="btn" type="button" data-book>Check dates</button>
+</div>
+
+<dialog id="bookDialog" aria-labelledby="dlgTitle">
+  <div class="dlg-in">
+    <div class="dlg-top">
+      <div><h3 id="dlgTitle">Check your dates</h3><p>Sends a ready-made message to the villa on WhatsApp.</p></div>
+      <button class="x" type="button" id="closeDlg" aria-label="Close">×</button>
+    </div>
+    <form id="bookForm" method="dialog">
+      <div class="f-row">
+        <div><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" placeholder="Jane Perera" required></div>
+        <div><label for="phone">Your phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="077 000 0000" required></div>
+      </div>
+      <div class="f-row">
+        <div><label for="in">Check in</label><input id="in" name="in" type="date" required></div>
+        <div><label for="out">Check out</label><input id="out" name="out" type="date" required></div>
+      </div>
+      <div class="f-row">
+        <div><label for="guestCount">Guests</label><select id="guestCount" name="guests"><option>2</option><option>1</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></div>
+        <div><label for="room">Rooms needed</label><select id="room" name="room"><option>Not sure yet</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div>
+      </div>
+      <div><label for="note">Anything else?</label><textarea id="note" name="note" placeholder="Airport pickup, yoga, a quiet room..."></textarea></div>
+      <button class="btn" type="submit">Send enquiry on WhatsApp <span class="arw">↗</span></button>
+      <p class="dlg-foot">You will review the message in WhatsApp before it is sent.</p>
+    </form>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  var saved=null; try{saved=localStorage.getItem('hv-theme')}catch(e){}
+  if(saved==='dark'||saved==='light'){root.dataset.theme=saved}
+  else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches){root.dataset.theme='dark'}
+  var sun='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></svg>';
+  var moon='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.7 6.7 0 0 0 10.5 10.5Z"/></svg>';
+  function paint(){btn.innerHTML=root.dataset.theme==='dark'?sun:moon}
+  paint();
+  btn.addEventListener('click',function(){
+    root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';
+    try{localStorage.setItem('hv-theme',root.dataset.theme)}catch(e){}
+    paint();
+  });
+
+  var io=null;
+  if('IntersectionObserver' in window){
+    io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('on');io.unobserve(en.target)}})
+    },{threshold:.1,rootMargin:'0px 0px -30px 0px'});
+    document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+  }else{
+    document.querySelectorAll('.rv').forEach(function(el){el.classList.add('on')});
+  }
+
+  var dlg=document.getElementById('bookDialog'), form=document.getElementById('bookForm');
+  document.querySelectorAll('[data-book]').forEach(function(b){b.addEventListener('click',function(){
+    if(typeof dlg.showModal==='function'){dlg.showModal()}else{window.location.href='https://wa.me/94770498823'}
+  })});
+  document.getElementById('closeDlg').addEventListener('click',function(){dlg.close()});
+  dlg.addEventListener('click',function(e){if(e.target===dlg){dlg.close()}});
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var d=new FormData(form);
+    var lines=[
+      'Hello Heritage Villa, I would like to enquire about a stay.',
+      '',
+      'Name: '+(d.get('name')||''),
+      'Phone: '+(d.get('phone')||''),
+      'Check in: '+(d.get('in')||''),
+      'Check out: '+(d.get('out')||''),
+      'Guests: '+(d.get('guests')||''),
+      'Rooms: '+(d.get('room')||''),
+      'Note: '+((d.get('note')||'').trim()||'None')
+    ];
+    var url='https://wa.me/94770498823?text='+encodeURIComponent(lines.join('\n'));
+    window.open(url,'_blank','noopener');
+    dlg.close();
+  });
+})();
+</script>
+</body>
+</html>

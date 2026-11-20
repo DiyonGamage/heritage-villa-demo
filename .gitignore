@@ -1,0 +1,6 @@
+.qa/
+.research/
+.sourcing/
+*.png
+.DS_Store
+Thumbs.db
